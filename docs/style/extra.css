@@ -1,0 +1,19 @@
+/* 扩展正文宽度，使其接近开发文档风格 */
+.md-content {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+  
+  /* 去除默认的中间内边距，让正文更“满” */
+  .md-main__inner {
+    max-width: none !important;
+    padding: 0 2rem;
+  }
+  
+  /* 让代码块更醒目 */
+  .md-typeset code {
+    font-size: 0.9rem;
+    background-color: rgba(0,0,0,0.04);
+    border-radius: 4px;
+    padding: 2px 4px;
+  }

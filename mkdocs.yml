@@ -1,16 +1,46 @@
 site_name: 开发文档
-site_url: https://mydomain.org/mysite
+
+nav:
+  - 开发技术文档: PALib功能对照手册.md
+
 theme:
   name: material
-  palette: 
-    # Palette toggle for light mode
+  features:
+    # 🧭 布局相关（核心）
+    - navigation.sections      # 左侧导航分组
+    - navigation.expand        # 默认展开所有章节
+    - navigation.instant       # 页面切换不刷新
+    - toc.integrate            # 将右侧目录整合到左侧导航栏
+    - content.code.copy        # 代码块右上角复制按钮
+  palette:
     - scheme: default
+      primary: indigo
+      accent: indigo
       toggle:
-        icon: material/brightness-7 
+        icon: material/weather-night
         name: Switch to dark mode
-
-    # Palette toggle for dark mode
     - scheme: slate
+      primary: indigo
+      accent: indigo
       toggle:
-        icon: material/brightness-4
+        icon: material/weather-sunny
         name: Switch to light mode
+
+plugins:
+  - table-reader
+  - search:
+      lang:
+        - en
+        - ja
+      separator: '[\s\-\.]+'
+
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.details
+  - attr_list
+  - def_list
+  - tables
+
+extra_css:
+  - styles/extra.css
